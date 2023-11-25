@@ -2,6 +2,7 @@
 import { Fragment } from "react";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
+import { generateCarImageUrl } from "../utils";
 
 import { CarProps } from "../types";
 
@@ -69,7 +70,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                     rounded-lg"
                     >
                       <Image
-                        src="/hero.png"
+                        src={generateCarImageUrl(car, "angle")}
                         alt="car model"
                         fill
                         priority
@@ -84,7 +85,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       rounded-lg"
                       >
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, "29")}
                           alt="car model"
                           fill
                           priority
@@ -97,7 +98,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       rounded-lg"
                       >
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, "33")}
                           alt="car model"
                           fill
                           priority
@@ -110,7 +111,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       rounded-lg"
                       >
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, "13")}
                           alt="car model"
                           fill
                           priority
